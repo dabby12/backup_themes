@@ -1,0 +1,117 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "alignment": "left",
+        "segments": [
+          {
+            "type": "text",
+            "style": "diamond",
+            "background": "#007f5f",
+            "foreground": "#ffe066",
+            "leading_diamond": "\ue0b6",
+            "template": "{{ .UserName }} 🏖 こんにちは ⟫ {{ .HostName }}",
+            "trailing_diamond": "\ue0b4"
+          },
+          {
+            "type": "text",
+            "style": "diamond",
+            "background": "#38a3a5",
+            "foreground": "#f4f1bb",
+            "leading_diamond": "\ue0b6",
+            "template": "🌞夏 | 海 | 花火",
+            "trailing_diamond": "\ue0b4"
+          },
+          {
+            "type": "text",
+            "style": "diamond",
+            "background": "#57cc99",
+            "foreground": "#edf6f9",
+            "leading_diamond": "\ue0b6",
+            "template": "夏の思い出は永遠に",
+            "trailing_diamond": "\ue0b4"
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "right",
+        "segments": [
+          {
+            "type": "path",
+            "style": "diamond",
+            "background": "#007f5f",
+            "foreground": "#ffe066",
+            "leading_diamond": "\ue0b6",
+            "template": "\ue5ff {{ .Path }}",
+            "trailing_diamond": "\ue0b4",
+            "properties": {
+              "style": "folder"
+            }
+          },
+          {
+            "type": "git",
+            "style": "diamond",
+            "background": "#38a3a5",
+            "foreground": "#f4f1bb",
+            "leading_diamond": "\ue0b6",
+            "template": "🌿 {{ .HEAD }}",
+            "trailing_diamond": "\ue0b4",
+            "properties": {
+              "fetch_status": true,
+              "fetch_upstream_icon": true
+            }
+          },
+          {
+            "type": "battery",
+            "style": "diamond",
+            "background": "#007f5f",
+            "foreground": "#caffbf",
+            "leading_diamond": "\ue0b6",
+            "template": "\uf240 {{ .Percentage }}",
+            "trailing_diamond": "\ue0b4",
+            "properties": {
+              "charged_icon": "\udb84\udea6",
+              "charging_icon": "\udb84\udea5",
+              "discharging_icon": "\udb84\udea4"
+            }
+          }
+        ],
+        "type": "prompt"
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "foreground": "#fce38a",
+            "leading_diamond": "<#00c7fc> \ue285 </><#fce38a>{</>",
+            "properties": {
+              "folder_icon": "\uf07b",
+              "folder_separator_icon": " \uebcb ",
+              "home_icon": "home",
+              "style": "agnoster_full"
+            },
+            "style": "diamond",
+            "template": " \ue5ff {{ .Path }} ",
+            "trailing_diamond": "<#fce38a>}</>",
+            "type": "path"
+          },
+          {
+            "foreground": "#ff6b6b",
+            "foreground_templates": ["{{ if gt .Code 0 }}#ef5350{{ end }}"],
+            "properties": {
+              "always_enabled": true
+            },
+            "style": "plain",
+            "template": " \uf303  ",
+            "type": "status"
+          }
+        ],
+        "type": "prompt"
+      }
+    ],
+    "final_space": true,
+    "version": 3
+  }
+  
